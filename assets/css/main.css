@@ -60,6 +60,13 @@ svg {
   left: -2rem !important;
   box-shadow: 0rem 0rem 10px rgba(46, 91, 255, 0.1); }
 
+.active {
+  border-left: 3px solid #2e5bff;
+  background-color: rgba(46, 91, 255, 0.1); }
+
+.menu-item-active {
+  fill: #2e5bff; }
+
 .alert::after {
   content: "";
   position: absolute;

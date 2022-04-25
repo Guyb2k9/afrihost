@@ -17,6 +17,15 @@
   box-shadow: 0rem 0rem 10px rgba($color-primary, 0.1);
 }
 
+.active {
+  border-left: 3px solid $color-primary;
+  background-color: rgba($color-primary, 0.1);
+}
+
+.menu-item-active {
+  fill: $color-primary;
+}
+
 .alert {
   &::after {
     content: "";
