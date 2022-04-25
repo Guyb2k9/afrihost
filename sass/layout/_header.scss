@@ -9,6 +9,10 @@
   grid-column: sidebar-end / gutter-right-end;
   grid-row: 1;
 
+  .toggle-button {
+    display: none;
+  }
+
   &__notifications {
     display: flex;
     align-items: center;
@@ -27,12 +31,24 @@
 
 @media (max-width: 768px) {
   .header {
+    .toggle-button {
+      display: flex;
+    }
+  }
+
+  .hide-icon {
     display: none;
   }
 }
 
 @media (max-width: 360px) {
   .header {
+    .toggle-button {
+      display: flex;
+    }
+  }
+
+  .hide-icon {
     display: none;
   }
 }

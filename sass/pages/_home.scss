@@ -98,3 +98,11 @@
     }
   }
 }
+
+@media (max-width: 360px) {
+  .content {
+    &__data {
+      margin: 0.3rem;
+    }
+  }
+}

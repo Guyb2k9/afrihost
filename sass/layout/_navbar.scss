@@ -71,3 +71,23 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .nav-container {
+    width: 0rem;
+
+    .toggle-button {
+      opacity: 0;
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .nav-container {
+    width: 0rem;
+
+    .toggle-button {
+      opacity: 0;
+    }
+  }
+}

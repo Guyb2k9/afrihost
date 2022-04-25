@@ -19,10 +19,12 @@ body {
 
 @media (max-width: 768px) {
   .container {
-    grid-template-rows: 0rem auto;
+    grid-template-rows: 8rem auto;
     grid-template-columns: [sidebar-start] min-content [sidebar-end left-gutter-start] 1rem [left-gutter-end content-start] auto [content-end filter-start] min-content [filter-end gutter-right-start] 1rem [gutter-right-end]; } }
 
 @media (max-width: 360px) {
+  .container {
+    grid-template-columns: [sidebar-start] min-content [sidebar-end left-gutter-start] 0rem [left-gutter-end content-start] auto [content-end filter-start] min-content [filter-end gutter-right-start] 0rem [gutter-right-end]; }
   html {
     font-size: 55%; } }
 
@@ -205,20 +207,25 @@ input[type="range"]:focus::-ms-fill-upper {
     font-weight: 600; }
 
 @media (max-width: 360px) {
-  .data__card--date,
-  .data__card--power,
-  .data__card--trips,
-  .data__card--name {
-    display: none; } }
-
-@media (max-width: 768px) {
-  .data__card--date,
+  .data__card {
+    padding: 2rem 1rem; }
+  .data__card--model,
   .data__card--power,
   .data__card--trips {
-    display: none; } }
+    display: none; }
+  .data__card--date {
+    text-align: right; } }
+
+@media (max-width: 768px) {
+  .data__card--model,
+  .data__card--power,
+  .data__card--trips {
+    display: none; }
+  .data__card--date {
+    text-align: right; } }
 
 @media (max-width: 1000px) {
-  .data__card--date,
+  .data__card--model,
   .data__card--power {
     display: none; } }
 
@@ -310,6 +317,8 @@ input[type="range"]:focus::-ms-fill-upper {
   background-color: #ffffff;
   grid-column: sidebar-end / gutter-right-end;
   grid-row: 1; }
+  .header .toggle-button {
+    display: none; }
   .header__notifications {
     display: flex;
     align-items: center; }
@@ -321,11 +330,15 @@ input[type="range"]:focus::-ms-fill-upper {
       width: 5rem; }
 
 @media (max-width: 768px) {
-  .header {
+  .header .toggle-button {
+    display: flex; }
+  .hide-icon {
     display: none; } }
 
 @media (max-width: 360px) {
-  .header {
+  .header .toggle-button {
+    display: flex; }
+  .hide-icon {
     display: none; } }
 
 .nav-container {
@@ -380,6 +393,18 @@ input[type="range"]:focus::-ms-fill-upper {
       border-left: 3px solid #2e5bff; }
     .nav__item:hover .menu-icon {
       fill: #2e5bff; }
+
+@media (max-width: 768px) {
+  .nav-container {
+    width: 0rem; }
+    .nav-container .toggle-button {
+      opacity: 0; } }
+
+@media (max-width: 360px) {
+  .nav-container {
+    width: 0rem; }
+    .nav-container .toggle-button {
+      opacity: 0; } }
 
 .content {
   position: relative; }
@@ -455,3 +480,7 @@ input[type="range"]:focus::-ms-fill-upper {
     left: -25rem;
     pointer-events: none;
     height: 100vh; } }
+
+@media (max-width: 360px) {
+  .content__data {
+    margin: 0.3rem; } }

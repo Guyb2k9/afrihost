@@ -24,12 +24,15 @@ body {
 
 @media (max-width: 768px) {
   .container {
-    grid-template-rows: 0rem auto;
+    grid-template-rows: 8rem auto;
     grid-template-columns: [sidebar-start]min-content[sidebar-end left-gutter-start] 1rem[left-gutter-end content-start] auto [content-end filter-start] min-content[filter-end gutter-right-start]1rem[gutter-right-end];
   }
 }
 
 @media (max-width: 360px) {
+  .container {
+    grid-template-columns: [sidebar-start]min-content[sidebar-end left-gutter-start] 0rem[left-gutter-end content-start] auto [content-end filter-start] min-content[filter-end gutter-right-start]0rem[gutter-right-end];
+  }
   html {
     font-size: 55%;
   }

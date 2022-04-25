@@ -43,24 +43,32 @@
 }
 
 @media (max-width: 360px) {
-  .data__card--date,
-  .data__card--power,
-  .data__card--trips,
-  .data__card--name {
-    display: none;
+  .data__card {
+    padding: 2rem 1rem;
   }
-}
-
-@media (max-width: 768px) {
-  .data__card--date,
+  .data__card--model,
   .data__card--power,
   .data__card--trips {
     display: none;
   }
+  .data__card--date {
+    text-align: right;
+  }
+}
+
+@media (max-width: 768px) {
+  .data__card--model,
+  .data__card--power,
+  .data__card--trips {
+    display: none;
+  }
+  .data__card--date {
+    text-align: right;
+  }
 }
 
 @media (max-width: 1000px) {
-  .data__card--date,
+  .data__card--model,
   .data__card--power {
     display: none;
   }
