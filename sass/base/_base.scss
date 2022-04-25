@@ -1,0 +1,29 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  //this defines what 1rem is
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: $color-background-grey;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 8rem auto;
+  grid-template-columns: [sidebar-start]min-content[sidebar-end left-gutter-start] 5rem[left-gutter-end content-start] auto [content-end filter-start] min-content[filter-end gutter-right-start]5rem[gutter-right-end];
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: [sidebar-start]min-content[sidebar-end left-gutter-start] 1rem[left-gutter-end content-start] auto [content-end filter-start] min-content[filter-end gutter-right-start]1rem[gutter-right-end];
+  }
+}

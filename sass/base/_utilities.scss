@@ -1,0 +1,150 @@
+.hide {
+  display: none;
+  opacity: 100% !important;
+  transition: opacity 0.3s ease;
+}
+.show {
+  width: 25rem !important;
+  background-color: red;
+}
+
+.fadeInOut {
+  animation: fadeInOut;
+  transition: all 0.3s linear;
+}
+
+.filter-show {
+  width: 30rem !important;
+  opacity: 100% !important;
+  transition: opacity 1.3s ease;
+  pointer-events: all !important;
+  left: -2rem !important;
+  box-shadow: 0rem 0rem 10px rgba($color-primary, 0.1);
+}
+
+.alert {
+  &::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    right: 10;
+    width: 1rem;
+    height: 1rem;
+    outline: 3px solid $color-white;
+    background-color: $color-primary;
+    border-radius: 50rem;
+  }
+}
+
+.btn {
+  text-decoration: none;
+  color: $color-white;
+  background-color: $color-primary;
+  padding: 1rem 4rem;
+  border-radius: 0.3rem;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  border: 0px;
+  font-size: 1.5rem;
+}
+
+//////////////////////////////////////////////////////// range input styling
+input[type="range"] {
+  height: 25px;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+}
+input[type="range"]:focus {
+  outline: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  -webkit-animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: $color-primary;
+  border-radius: 50rem;
+  border: 0px solid #000000;
+}
+input[type="range"]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 4px solid $color-primary;
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: #fff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -7px;
+}
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: $color-primary;
+}
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  -webkit-animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: #2497e3;
+  border-radius: 1px;
+  border: 0px solid #000000;
+}
+input[type="range"]::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 1px solid #2497e3;
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: #a1d0ff;
+  cursor: pointer;
+}
+input[type="range"]::-ms-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  -webkit-animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type="range"]::-ms-fill-lower {
+  background: #2497e3;
+  border: 0px solid #000000;
+  border-radius: 2px;
+  box-shadow: 0px 0px 0px #000000;
+}
+input[type="range"]::-ms-fill-upper {
+  background: #2497e3;
+  border: 0px solid #000000;
+  border-radius: 2px;
+  box-shadow: 0px 0px 0px #000000;
+}
+input[type="range"]::-ms-thumb {
+  margin-top: 1px;
+  box-shadow: 0px 0px 0px #000000;
+  border: 1px solid #2497e3;
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: #a1d0ff;
+  cursor: pointer;
+}
+input[type="range"]:focus::-ms-fill-lower {
+  background: #2497e3;
+}
+input[type="range"]:focus::-ms-fill-upper {
+  background: #2497e3;
+}
+
+//////////////////////////////////////////////////////// thumb input styling end
+
+@media (max-width: 768px) {
+  .menu-show {
+    position: absolute;
+    z-index: 0;
+  }
+}

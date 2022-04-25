@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0rem 5%;
+
+  background-color: $color-white;
+  grid-column: sidebar-end / gutter-right-end;
+  grid-row: 1;
+
+  &__notifications {
+    display: flex;
+    align-items: center;
+
+    &--icon {
+      margin-right: 2rem;
+      position: relative;
+    }
+
+    img {
+      border-radius: 50rem;
+      width: 5rem;
+    }
+  }
+}

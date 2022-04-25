@@ -1,0 +1,58 @@
+.data__card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: left;
+
+  background-color: $color-white;
+  border: 1px solid rgba($color-primary, 0.2);
+  padding: 2rem;
+  border-radius: 0.3rem;
+  margin-bottom: 1rem;
+
+  align-items: center;
+
+  & > * {
+    flex: 1;
+  }
+
+  &:hover {
+    box-shadow: 0px 0px 50px rgba($color-primary, 0.1);
+    cursor: pointer;
+  }
+
+  &--image {
+    display: flex;
+    flex-direction: row;
+
+    img {
+      border-radius: 50rem;
+      margin-right: 1rem;
+    }
+  }
+
+  &--id {
+    display: block;
+  }
+
+  &--manage {
+    text-align: right;
+    color: $color-primary;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 768px) {
+  .data__card--date,
+  .data__card--power,
+  .data__card--trips {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .data__card--date,
+  .data__card--power {
+    display: none;
+  }
+}

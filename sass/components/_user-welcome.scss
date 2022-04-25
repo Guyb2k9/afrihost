@@ -1,0 +1,23 @@
+.user-welcome {
+  align-items: center;
+  display: flex;
+  width: 100%;
+  margin-left: 3rem;
+  opacity: 0%;
+
+  &__photo {
+    width: 5rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+  }
+
+  &__p {
+    display: block;
+    color: $text-main;
+
+    span {
+      display: block;
+      color: $text-menu;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.5rem;
+}
+
+svg {
+  width: 2.5rem;
+
+  &:hover {
+    fill: orange;
+  }
+}
