@@ -246,6 +246,11 @@ input[type="range"]:focus::-ms-fill-upper {
 
 .filter-style {
   color: #2e384d; }
+  .filter-style__expand {
+    display: flex;
+    justify-content: space-between; }
+    .filter-style__expand span {
+      color: #8798ad; }
   .filter-style__btn {
     display: none;
     font-weight: 600;
@@ -483,4 +488,4 @@ input[type="range"]:focus::-ms-fill-upper {
 
 @media (max-width: 360px) {
   .content__data {
-    margin: 0.3rem; } }
+    margin: 2rem; } }

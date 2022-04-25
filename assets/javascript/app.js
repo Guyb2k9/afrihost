@@ -7,8 +7,10 @@ const app = Vue.createApp({
       search: "",
       power: "",
       trips: 0,
+      service: 0,
       menuSelected: false,
       filterSelected: false,
+      recievedData: [],
     };
   },
   methods: {
@@ -18,6 +20,14 @@ const app = Vue.createApp({
     toggleFilter() {
       this.filterSelected = !this.filterSelected;
     },
+  },
+  mounted() {
+    axios
+      .get("https://www.afrihost.com/resources/fedev/mid/")
+      .then((response) => (this.recievedData = response.data.vehicles))
+      .catch(function (error) {
+        console.log("error" + error);
+      });
   },
   watch: {},
   computed: {
@@ -29,6 +39,10 @@ const app = Vue.createApp({
     },
     showFilter() {
       return { "filter-show": this.filterSelected };
+    },
+
+    objectLength() {
+      return this.recievedData.length;
     },
   },
 });
@@ -71,6 +85,11 @@ app.component("vehicle-listings", {
       .catch(function (error) {
         console.log("error" + error);
       });
+  },
+  methods: {
+    transferData() {
+      this.$emit("recieved:data", recievedData);
+    },
   },
   computed: {
     filteredCars: function () {

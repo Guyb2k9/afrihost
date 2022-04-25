@@ -243,7 +243,7 @@
     </header>
     <div class="content__data">
       <div class="heading">
-        <h1 class="heading__title">Vehicles Dashboard<sup>1192 Total</sup></h1>
+        <h1 class="heading__title">Vehicles Dashboard<sup>{{objectLength}} Total</sup></h1>
         <a href="#" class="heading__filter-toggle btn" @click="toggleFilter">Show Filters</a>
       </div>
       <div class="data__card--heading" >
@@ -257,17 +257,17 @@
         <p class="data__card--power">Power kWh</p>
         <p class="data__card--manage"></p>
       </div>
-    <vehicle-listings :update-search="search" :update-trips="trips" :update-power="power"></vehicle-listings>
+    <vehicle-listings :update-search="search" :update-trips="trips" :update-power="power" :data="recievedData"></vehicle-listings>
     </div>
     <div class="content__filter" :class="showFilter" >
       <p class="content__filter--heading">
         FILTER
       </p>
       <form action="" class="filter-style">
-        <label for="trips">Trips</label>
+        <label for="trips" class="filter-style__expand">Trips<span>{{trips}}</span></label>
           <input v-model="trips" type="range" class="trips" name="trips" min="0" max="1000"/>
-        <label for="trips"/> Service</label>
-         <input type="range" class="service" name="service">
+        <label for="service" class="filter-style__expand"/> Service Due<span>{{service}} Days</span></label>
+         <input v-model="service" type="range" class="service" name="service" min="0" max="50">
         <label for="model"/> Model</label>
           <input v-model="search" type="text" name="" id="" class="model" name="model" placeholder="Vehicle Model"/>
         <label for="status"/> Status of Vehicle</label>

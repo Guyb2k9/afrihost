@@ -19,6 +19,15 @@
 .filter-style {
   color: $text-main;
 
+  &__expand {
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      color: $text-menu;
+    }
+  }
+
   &__btn {
     display: none;
     font-weight: 600;
