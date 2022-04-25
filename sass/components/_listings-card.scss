@@ -42,6 +42,15 @@
   }
 }
 
+@media (max-width: 360px) {
+  .data__card--date,
+  .data__card--power,
+  .data__card--trips,
+  .data__card--name {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .data__card--date,
   .data__card--power,

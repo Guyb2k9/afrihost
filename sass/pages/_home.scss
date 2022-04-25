@@ -4,6 +4,7 @@
     grid-column: content-start / content-end;
     grid-row: 2/3;
     margin: 2rem;
+    min-height: 100vh;
   }
 }
 
@@ -62,10 +63,12 @@
     }
   }
   .heading {
+    grid-row: 1/2;
     &__title {
       display: none;
     }
     &__fiter-toggle {
+      grid-row: 1;
       width: 100%;
     }
     .btn {

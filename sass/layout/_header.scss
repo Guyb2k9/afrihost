@@ -24,3 +24,15 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .header {
+    display: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .header {
+    display: none;
+  }
+}

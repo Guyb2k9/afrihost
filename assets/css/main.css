@@ -19,7 +19,12 @@ body {
 
 @media (max-width: 768px) {
   .container {
+    grid-template-rows: 0rem auto;
     grid-template-columns: [sidebar-start] min-content [sidebar-end left-gutter-start] 1rem [left-gutter-end content-start] auto [content-end filter-start] min-content [filter-end gutter-right-start] 1rem [gutter-right-end]; } }
+
+@media (max-width: 360px) {
+  html {
+    font-size: 55%; } }
 
 @keyframes fadeInOut {
   from {
@@ -44,10 +49,6 @@ svg {
 .show {
   width: 25rem !important;
   background-color: red; }
-
-.fadeInOut {
-  animation: fadeInOut;
-  transition: all 0.3s linear; }
 
 .filter-show {
   width: 30rem !important;
@@ -203,6 +204,13 @@ input[type="range"]:focus::-ms-fill-upper {
     color: #2e5bff;
     font-weight: 600; }
 
+@media (max-width: 360px) {
+  .data__card--date,
+  .data__card--power,
+  .data__card--trips,
+  .data__card--name {
+    display: none; } }
+
 @media (max-width: 768px) {
   .data__card--date,
   .data__card--power,
@@ -312,10 +320,18 @@ input[type="range"]:focus::-ms-fill-upper {
       border-radius: 50rem;
       width: 5rem; }
 
+@media (max-width: 768px) {
+  .header {
+    display: none; } }
+
+@media (max-width: 360px) {
+  .header {
+    display: none; } }
+
 .nav-container {
   grid-column: sidebar-start / sidebar-end;
   grid-row: 1 / -1;
-  height: 100vh;
+  height: 100%;
   width: 8rem;
   background-color: #ffffff;
   border-right: 1px solid rgba(46, 91, 255, 0.1);
@@ -370,7 +386,8 @@ input[type="range"]:focus::-ms-fill-upper {
   .content__data {
     grid-column: content-start / content-end;
     grid-row: 2/3;
-    margin: 2rem; }
+    margin: 2rem;
+    min-height: 100vh; }
 
 .heading {
   display: flex;
@@ -413,12 +430,15 @@ input[type="range"]:focus::-ms-fill-upper {
     .content__data {
       grid-column: content-start / content-end;
       grid-row: 2/3; }
-  .heading__title {
-    display: none; }
-  .heading__fiter-toggle {
-    width: 100%; }
-  .heading .btn {
-    width: 100%; } }
+  .heading {
+    grid-row: 1/2; }
+    .heading__title {
+      display: none; }
+    .heading__fiter-toggle {
+      grid-row: 1;
+      width: 100%; }
+    .heading .btn {
+      width: 100%; } }
 
 @media (max-width: 1000px) {
   .content__data {
